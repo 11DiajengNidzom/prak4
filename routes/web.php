@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Http\Controllers\PegawaiController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pegawai', [PegawaiController::class, 'index']);
